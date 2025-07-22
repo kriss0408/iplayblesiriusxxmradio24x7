@@ -3,90 +3,199 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SiriusXM Radio Support - Call Now</title>
-  <meta name="description" content="Get help with SiriusXM radio services, accounts, and app. Call +1(805) 362-2187 or +1(805) 362-2187 for support. Not affiliated with SiriusXM.">
-  <!-- Google Fonts: Poppins -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-  <!-- Tailwind CSS CDN with Custom Colors -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            'support-teal': '#1A3C34',
-            'support-cyan': '#00D4FF',
-            'support-white': '#F5F7FA',
-            'support-coral': '#FF6B6B',
-            'support-cyan-hover': '#00B0D8'
-          },
-          fontFamily: {
-            poppins: ['Poppins', 'sans-serif']
-          }
-        }
-      }
-    }
-  </script>
+  <title>SiriusXM Independent Support - Contact Us</title>
+  <meta name="description" content="Need help with SiriusXM radio, account, or app? Contact our independent support at +1(805) 362-2187. Not affiliated with SiriusXM.">
+  <meta name="robots" content="index, follow">
+  <!-- Google Fonts: Roboto -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   <!-- Schema Markup -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
-    "name": "SiriusXM Radio Support",
+    "name": "SiriusXM Independent Support",
     "telephone": "+1(805) 362-2187",
-    "description": "Independent support for SiriusXM radio services, accounts, and app troubleshooting. Not affiliated with SiriusXM."
+    "description": "Independent support service for SiriusXM radio, account, and app issues. Not affiliated with SiriusXM."
   }
   </script>
-  <!-- Custom CSS for Animations -->
+  <!-- Custom CSS -->
   <style>
-    @keyframes fadeInUp {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
+    :root {
+      --primary-blue: #003087;
+      --accent-cyan: #00AEEF;
+      --bg-gray: #F8F9FA;
+      --accent-silver: #C0C0C0;
+      --text-dark: #333333;
+      --text-white: #FFFFFF;
     }
-    @keyframes pulse {
-      0%, 100% { transform: scale(1); }
-      50% { transform: scale(1.05); }
+    body {
+      font-family: 'Roboto', sans-serif;
+      background-color: var(--bg-gray);
+      color: var(--text-dark);
+      margin: 0;
+      line-height: 1.6;
     }
-    @keyframes gradientShift {
-      0% { background-position: 0% 50%; }
-      50% { background-position: 100% 50%; }
-      100% { background-position: 0% 50%; }
+    /* Animations */
+    @keyframes slideIn {
+      from { opacity: 0; transform: translateX(-30px); }
+      to { opacity: 1; transform: translateX(0); }
     }
-    .animate-fade-in {
+    @keyframes buttonGlow {
+      0%, 100% { box-shadow: 0 0 10px var(--accent-cyan); }
+      50% { box-shadow: 0 0 20px var(--accent-cyan); }
+    }
+    .slide-in {
       opacity: 0;
-      animation: fadeInUp 0.6s ease-out forwards;
+      animation: slideIn 0.8s ease-out forwards;
     }
-    .animate-pulse {
-      animation: pulse 2s infinite ease-in-out;
+    .glow-button:hover {
+      box-shadow: 0 0 15px var(--accent-cyan);
+      transform: translateY(-2px);
     }
-    .bg-gradient-animate {
-      background: linear-gradient(45deg, #1A3C34, #00D4FF);
-      background-size: 200% 200%;
-      animation: gradientShift 15s ease infinite;
-    }
-    .hover-scale-glow:hover {
-      transform: scale(1.05);
-      box-shadow: 0 0 15px rgba(0, 212, 255, 0.5);
-    }
-    .image-tilt {
-      transform: rotate(2deg);
-      transition: transform 0.3s ease;
-    }
-    .image-tilt:hover {
-      transform: rotate(0deg);
-    }
-    .observer-section {
-      visibility: hidden;
-    }
-    .observer-section.visible .animate-fade-in {
-      visibility: visible;
+    .section-visible .slide-in {
       animation-play-state: running;
     }
+    /* Header */
+    header {
+      background: linear-gradient(90deg, var(--primary-blue), var(--accent-cyan));
+      color: var(--text-white);
+      padding: 1.5rem 2rem;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    header .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      align-items: center;
+    }
+    header h1 {
+      font-size: 1.8rem;
+      margin: 0;
+    }
+    header .contact-links a {
+      color: var(--text-white);
+      text-decoration: none;
+      margin-left: 1rem;
+      font-size: 1rem;
+      transition: color 0.3s;
+    }
+    header .contact-links a:hover {
+      color: var(--accent-silver);
+    }
+    /* Main Sections */
+    main {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 2rem;
+    }
+    .hero {
+      background: var(--primary-blue);
+      color: var(--text-white);
+      padding: 3rem;
+      border-radius: 12px;
+      text-align: center;
+      margin-bottom: 2rem;
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    }
+    .hero h2 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+    .hero p {
+      max-width: 600px;
+      margin: 0 auto 1.5rem;
+      font-size: 1.1rem;
+    }
+    .hero .buttons {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      justify-items: center;
+    }
+    .hero .buttons a {
+      background: var(--accent-cyan);
+      color: var(--primary-blue);
+      padding: 0.8rem 1.5rem;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: all 0.3s;
+    }
+    .card {
+      background: var(--text-white);
+      border: 1px solid var(--accent-silver);
+      border-radius: 12px;
+      padding: 2rem;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      margin-bottom: 2rem;
+    }
+    .card h3 {
+      font-size: 1.8rem;
+      color: var(--primary-blue);
+      margin-bottom: 1rem;
+    }
+    .card ul {
+      list-style: none;
+      padding: 0;
+    }
+    .card ul li {
+      display: flex;
+      align-items: center;
+      margin-bottom: 0.8rem;
+      font-size: 1.1rem;
+    }
+    .card ul li::before {
+      content: '✔';
+      color: var(--accent-cyan);
+      margin-right: 0.5rem;
+    }
+    .app-section {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 2rem;
+      align-items: center;
+    }
+    .app-section img {
+      max-width: 100%;
+      border-radius: 8px;
+      transition: transform 0.3s;
+    }
+    .app-section img:hover {
+      transform: scale(1.05);
+    }
+    .divider {
+      border-top: 2px solid var(--accent-cyan);
+      max-width: 300px;
+      margin: 2rem auto;
+    }
+    /* Footer */
+    footer {
+      background: linear-gradient(90deg, var(--primary-blue), var(--accent-cyan));
+      color: var(--text-white);
+      padding: 1.5rem;
+      text-align: center;
+    }
+    footer a {
+      color: var(--text-white);
+      text-decoration: underline;
+      margin: 0 0.5rem;
+    }
+    footer a:hover {
+      color: var(--accent-silver);
+    }
+    /* Intersection Observer */
+    .section {
+      visibility: hidden;
+    }
+    .section.visible .slide-in {
+      visibility: visible;
+    }
   </style>
-  <!-- Intersection Observer for Fade-In -->
+  <!-- Intersection Observer Script -->
   <script>
     document.addEventListener('DOMContentLoaded', () => {
-      const sections = document.querySelectorAll('.observer-section');
+      const sections = document.querySelectorAll('.section');
       const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
           if (entry.isIntersecting) {
@@ -94,135 +203,118 @@
             observer.unobserve(entry.target);
           }
         });
-      }, { threshold: 0.1 });
+      }, { threshold: 0.2 });
       sections.forEach(section => observer.observe(section));
     });
   </script>
-  <!-- Ensure HTTPS in production -->
-  <meta name="robots" content="index, follow">
 </head>
-<body class="bg-support-white font-poppins">
+<body>
   <!-- Header -->
-  <header class="bg-gradient-to-r from-support-teal to-support-cyan shadow-lg">
-    <div class="max-w-7xl mx-auto py-4 px-4 sm:px-6 lg:px-8 flex items-center justify-between">
-      <h1 class="text-xl sm:text-2xl font-bold text-support-white">SiriusXM Radio Support</h1>
-      <div class="flex flex-col sm:flex-row sm:space-x-4">
-        <a href="tel:+18053622187" class="text-support-white hover:text-support-coral text-sm sm:text-base animate-pulse">📞 Call: +1(805) 362-2187</a>
-        <a href="tel:+18053622187" class="text-support-white hover:text-support-coral text-sm sm:text-base animate-pulse">📞 Call: +1(805) 362-2187</a>
+  <header>
+    <div class="container">
+      <h1>SiriusXM Independent Support</h1>
+      <div class="contact-links">
+        <a href="tel:+18053622187">📞 +1(805) 362-2187</a>
       </div>
     </div>
   </header>
 
-  <!-- Main Hero Section -->
-  <main class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8 text-center">
-    <section class="observer-section bg-gradient-animate rounded-xl shadow-2xl py-12 mb-12">
-      <h2 class="text-4xl sm:text-5xl font-extrabold text-support-white mb-4 animate-fade-in">Need SiriusXM Support? Call Now!</h2>
-      <p class="text-lg text-support-white mb-6 mx-auto max-w-2xl animate-fade-in" style="animation-delay: 0.2s;">
-        Struggling with your SiriusXM radio, account, or app? Our friendly team is ready to help you get back to enjoying your music and shows. <span class="italic text-sm">Not affiliated with SiriusXM.</span>
+  <!-- Main Content -->
+  <main>
+    <!-- Hero Section -->
+    <section class="hero section">
+      <h2 class="slide-in">Get SiriusXM Support Today!</h2>
+      <p class="slide-in" style="animation-delay: 0.2s;">
+        Facing issues with your SiriusXM radio, account, or app? Our independent support team is here to help. <span class="italic text-sm">Not affiliated with SiriusXM.</span>
       </p>
-      <div class="flex flex-col sm:flex-row justify-center gap-4">
-        <a href="tel:+18053622187" target="_blank" rel="noopener noreferrer" class="inline-block bg-support-cyan text-support-teal font-semibold py-4 px-8 rounded-lg hover:bg-support-cyan-hover hover-scale-glow transition duration-300 animate-fade-in" style="animation-delay: 0.4s;" onclick="gtag('event', 'call_click', { 'event_category': 'Button', 'event_label': 'Hero Call Now 888' })">Call Now: +1(805) 362-2187</a>
-        <a href="tel:+18053622187" target="_blank" rel="noopener noreferrer" class="inline-block bg-support-cyan text-support-teal font-semibold py-4 px-8 rounded-lg hover:bg-support-cyan-hover hover-scale-glow transition duration-300 animate-fade-in" style="animation-delay: 0.4s;" onclick="gtag('event', 'call_click', { 'event_category': 'Button', 'event_label': 'Hero Call Now 828' })">Call Now: +1(805) 362-2187</a>
+      <div class="buttons slide-in" style="animation-delay: 0.4s;">
+        <a href="tel:+18053622187" onclick="gtag('event', 'call_click', { 'event_category': 'Button', 'event_label': 'Hero Call' })">Contact: +1(805) 362-2187</a>
       </div>
     </section>
 
-    <!-- How We Can Help Section -->
-    <section class="observer-section mt-12">
-      <h3 class="text-3xl font-bold text-support-teal mb-6 text-center animate-fade-in">How We Can Help You</h3>
-      <div class="max-w-md mx-auto bg-support-white border-2 border-support-cyan rounded-xl shadow-lg p-6 animate-fade-in" style="animation-delay: 0.2s;">
-        <ul class="text-lg text-gray-700 list-inside text-left space-y-2">
-          <li class="flex items-center"><span class="text-support-coral mr-2">📱</span> Account setup and login assistance</li>
-          <li class="flex items-center"><span class="text-support-coral mr-2">💳</span> Subscription and billing questions</li>
-          <li class="flex items-center"><span class="text-support-coral mr-2">📻</span> Radio activation or signal issues</li>
-          <li class="flex items-center"><span class="text-support-coral mr-2">📲</span> App troubleshooting and setup</li>
-          <li class="flex items-center"><span class="text-support-coral mr-2">🛠️</span> General SiriusXM service support</li>
-        </ul>
-      </div>
-      <div class="flex flex-col sm:flex-row justify-center gap-4 mt-6">
-        <a href="tel:+18053622187" class="inline-block bg-support-cyan text-support-teal font-semibold py-4 px-8 rounded-lg hover:bg-support-cyan-hover hover-scale-glow transition duration-300 animate-fade-in" style="animation-delay: 0.4s;" onclick="gtag('event', 'call_click', { 'event_category': 'Button', 'event_label': 'Help Call Now 888' })">Call Now: +1(805) 362-2187</a>
-        <a href="tel:+18053622187" class="inline-block bg-support-cyan text-support-teal font-semibold py-4 px-8 rounded-lg hover:bg-support-cyan-hover hover-scale-glow transition duration-300 animate-fade-in" style="animation-delay: 0.4s;" onclick="gtag('event', 'call_click', { 'event_category': 'Button', 'event_label': 'Help Call Now 828' })">Call Now: +1(805) 362-2187</a>
+    <!-- Support Services Section -->
+    <section class="card section">
+      <h3 class="slide-in">Our Support Services</h3>
+      <ul class="slide-in" style="animation-delay: 0.2s;">
+        <li>Account setup and login support</li>
+        <li>Billing and subscription assistance</li>
+        <li>Radio activation and signal troubleshooting</li>
+        <li>SiriusXM app setup and fixes</li>
+        <li>General service guidance</li>
+      </ul>
+      <div class="buttons slide-in" style="animation-delay: 0.4s;">
+        <a href="tel:+18053622187" class="glow-button" onclick="gtag('event', 'call_click', { 'event_category': 'Button', 'event_label': 'Services Call' })">Call: +1(805) 362-2187</a>
       </div>
     </section>
 
-    <!-- Divider -->
-    <hr class="my-12 border-t-2 border-support-cyan max-w-md mx-auto">
+    <div class="divider"></div>
 
-    <!-- SiriusXM App Support Section -->
-    <section class="observer-section mt-12 px-4 sm:px-6 lg:px-8">
-      <h3 class="text-3xl font-bold text-support-teal mb-6 text-center md:text-left animate-fade-in">Trouble with the SiriusXM App?</h3>
-      <div class="flex flex-col md:flex-row gap-6 items-center md:items-start">
-        <!-- Text on Left -->
-        <div class="flex-1 min-w-0 text-left animate-fade-in" style="animation-delay: 0.2s;">
-          <p class="text-lg text-gray-600 mb-4">
-            Enjoy music, sports, and talk shows on the go with the <strong>SiriusXM App</strong>. If you’re facing setup issues or glitches, our team can help you get it running smoothly. Call us at <a href="tel:+18053622187" class="text-support-cyan hover:underline">+1(805) 362-2187</a> or <a href="tel:+18053622187" class="text-support-cyan hover:underline">+1(805) 362-2187</a> for expert support. <span class="italic text-sm">Not affiliated with SiriusXM.</span>
-          </p>
-        </div>
-        <!-- Image on Right -->
-        <div class="flex-shrink-0 w-full md:w-1/3 mx-auto animate-fade-in" style="animation-delay: 0.4s;">
-          <div class="relative bg-support-white p-4 rounded-lg shadow-xl image-tilt">
-            <img src="radio.jpg" alt="SiriusXM App interface for streaming music and troubleshooting support" class="w-full h-auto rounded-lg object-contain">
-          </div>
-        </div>
+    <!-- App Support Section -->
+    <section class="app-section section">
+      <div class="slide-in">
+        <h3 class="slide-in">SiriusXM App Assistance</h3>
+        <p>
+          Stream music, sports, and talk shows with the SiriusXM app. If you're experiencing issues, our team can assist. Contact us at <a href="tel:+18053622187" class="underline">+1(805) 362-2187</a>. <span class="italic text-sm">Not affiliated with SiriusXM.</span>
+        </p>
       </div>
-      <div class="flex flex-col sm:flex-row justify-center gap-4 mt-6">
-        <a href="tel:+18053622187" class="inline-block bg-support-cyan text-support-teal font-semibold py-4 px-8 rounded-lg hover:bg-support-cyan-hover hover-scale-glow transition duration-300 block mx-auto animate-fade-in" style="animation-delay: 0.6s;" onclick="gtag('event', 'call_click', { 'event_category': 'Button', 'event_label': 'App Call Now 888' })">Call Now: +1(805) 362-2187</a>
-        <a href="tel:+18053622187" class="inline-block bg-support-cyan text-support-teal font-semibold py-4 px-8 rounded-lg hover:bg-support-cyan-hover hover-scale-glow transition duration-300 block mx-auto animate-fade-in" style="animation-delay: 0.6s;" onclick="gtag('event', 'call_click', { 'event_category': 'Button', 'event_label': 'App Call Now 828' })">Call Now: +1(805) 362-2187</a>
+      <div class="slide-in" style="animation-delay: 0.2s;">
+        <img src="radio.jpg" alt="SiriusXM App interface for streaming support">
       </div>
     </section>
 
-    <!-- Divider -->
-    <hr class="my-12 border-t-2 border-support-cyan max-w-md mx-auto">
+    <div class="divider"></div>
 
     <!-- Privacy Policy Section -->
-    <section id="privacy" class="observer-section max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12">
-      <h3 class="text-3xl font-bold text-support-teal mb-4 text-center animate-fade-in">Privacy Policy</h3>
-      <div class="max-w-3xl mx-auto text-left text-gray-700 bg-support-white rounded-xl shadow-lg p-6 animate-fade-in" style="animation-delay: 0.2s;">
-        <p class="mb-4">At SiriusXM Radio Support, your privacy is our priority. This Privacy Policy explains how we handle your information when you reach out for help.</p>
-        <h4 class="text-lg font-semibold mb-2">Information We Collect</h4>
-        <p class="mb-4">When you call +1(805) 362-2187 or +1(805) 362-2187, we may collect minimal details like your name or contact info to resolve your support request. We don’t store this data after assisting you.</p>
-        <h4 class="text-lg font-semibold mb-2">How We Use Information</h4>
-        <p class="mb-4">We use your information solely to provide support and never for marketing purposes.</p>
-        <h4 class="text-lg font-semibold mb-2">Data Sharing</h4>
-        <p class="mb-4">Your information stays with us and isn’t shared with third parties, except as required by law.</p>
-        <h4 class="text-lg font-semibold mb-2">Your Rights</h4>
-        <p class="mb-4">You can ask about any data we hold, though we typically don’t retain information post-call.</p>
-        <h4 class="text-lg font-semibold mb-2">Contact Us</h4>
-        <p class="mb-4">Have privacy questions? Call us at +1(805) 362-2187 or +1(805) 362-2187.</p>
+    <section id="privacy" class="card section">
+      <h3 class="slide-in">Privacy Policy</h3>
+      <div class="slide-in" style="animation-delay: 0.2s;">
+        <p class="mb-4">Your privacy matters to us. This policy outlines how we manage your information.</p>
+        <h4 class="text-lg font-bold">Data Collection</h4>
+        <p class="mb-4">We collect minimal information (e.g., name, contact details) to assist with your support needs, which is not stored post-call.</p>
+        <h4 class="text-lg font-bold">Data Usage</h4>
+        <p class="mb-4">Your information is used only to provide support and not for marketing.</p>
+        <h4 class="text-lg font-bold">Data Sharing</h4>
+        <p class="mb-4">We do not share your data with third parties, except as required by law.</p>
+        <h4 class="text-lg font-bold">Your Rights</h4>
+        <p class="mb-4">You may inquire about any data we hold, though we typically do not retain it.</p>
+        <h4 class="text-lg font-bold">Contact</h4>
+        <p class="mb-4">Questions? Call <a href="tel:+18053622187" class="underline">+1(805) 362-2187</a>.</p>
         <p class="text-sm italic">Last updated: June 18, 2025</p>
       </div>
     </section>
 
+    <div class="divider"></div>
+
     <!-- Terms of Use Section -->
-    <section id="terms" class="observer-section max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12">
-      <h3 class="text-3xl font-bold text-support-teal mb-4 text-center animate-fade-in">Terms of Use</h3>
-      <div class="max-w-3xl mx-auto text-left text-gray-700 bg-support-white rounded-xl shadow-lg p-6 animate-fade-in" style="animation-delay: 0.2s;">
-        <p class="mb-4">Welcome to SiriusXM Radio Support! These Terms of Use outline the rules for using our support services.</p>
-        <h4 class="text-lg font-semibold mb-2">Service Description</h4>
-        <p class="mb-4">We offer independent support for SiriusXM radio services, including account help, billing, and app troubleshooting. We are not affiliated with SiriusXM or any other brand.</p>
-        <h4 class="text-lg font-semibold mb-2">User Responsibilities</h4>
-        <p class="mb-4">You agree to provide accurate information and use our services lawfully.</p>
-        <h4 class="text-lg font-semibold mb-2">Limitation of Liability</h4>
-        <p class="mb-4">We aim to provide accurate support but aren’t liable for issues arising from your use of SiriusXM services or our guidance.</p>
-        <h4 class="text-lg font-semibold mb-2">Changes to Terms</h4>
-        <p class="mb-4">We may update these terms. Continued use of our services means you accept the changes.</p>
-        <h4 class="text-lg font-semibold mb-2">Contact Us</h4>
-        <p class="mb-4">Questions about these terms? Call us at +1(805) 362-2187 or +1(805) 362-2187.</p>
+    <section id="terms" class="card section">
+      <h3 class="slide-in">Terms of Use</h3>
+      <div class="slide-in" style="animation-delay: 0.2s;">
+        <p class="mb-4">These terms govern your use of our independent support services.</p>
+        <h4 class="text-lg font-bold">Service Overview</h4>
+        <p class="mb-4">We provide support for SiriusXM radio, account, and app issues. We are not affiliated with SiriusXM.</p>
+        <h4 class="text-lg font-bold">User Obligations</h4>
+        <p class="mb-4">You agree to provide accurate information and use our services responsibly.</p>
+        <h4 class="text-lg font-bold">Liability</h4>
+        <p class="mb-4">We are not liable for issues arising from SiriusXM services or our support advice.</p>
+        <h4 class="text-lg font-bold">Term Updates</h4>
+        <p class="mb-4">We may revise these terms. Continued use implies acceptance.</p>
+        <h4 class="text-lg font-bold">Contact</h4>
+        <p class="mb-4">Questions? Call <a href="tel:+18053622187" class="underline">+1(805) 362-2187</a>.</p>
         <p class="text-sm italic">Last updated: June 18, 2025</p>
       </div>
     </section>
   </main>
 
   <!-- Footer -->
-  <footer class="bg-gradient-to-r from-support-teal to-support-cyan text-support-white py-6">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-      <p class="text-sm">SiriusXM Radio Support</p>
-      <p class="text-sm">Contact: <a href="tel:+18053622187" class="underline hover:text-support-coral">+1(805) 362-2187</a> | <a href="tel:+18053622187" class="underline hover:text-support-coral">+1(805) 362-2187</a></p>
-      <p class="text-sm mt-2">
-        <a href="#privacy" class="underline hover:text-support-coral">Privacy Policy</a> |
-        <a href="#terms" class="underline hover:text-support-coral">Terms of Use</a>
+  <footer>
+    <div>
+      <p>SiriusXM Independent Support</p>
+      <p>Contact: <a href="tel:+18053622187">+1(805) 362-2187</a></p>
+      <p>
+        <a href="#privacy">Privacy Policy</a> | <a href="#terms">Terms of Use</a>
       </p>
-      <p class="text-sm mt-2"><strong>Disclaimer:</strong> We are not affiliated with SiriusXM or any other brand. This is an independent support information page.</p>
-      <p class="text-sm mt-2">© 2025 SiriusXM Radio Support. All rights reserved.</p>
+      <p><strong>Disclaimer:</strong> This is an independent support service, not affiliated with SiriusXM or any other brand.</p>
+      <p>© 2025 SiriusXM Independent Support. All rights reserved.</p>
     </div>
   </footer>
 </body>
